@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:id="@+id/relativeLayout">
+
+	<GridLayout
+		android:id="@+id/actionBar"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/_35sdp"
+		android:orientation="horizontal"
+		android:paddingVertical="@dimen/_5sdp"
+		android:paddingHorizontal="@dimen/_10sdp"
+		android:layout_gravity="center_vertical"
+		android:background="@color/backgroundBlue"
+		android:layout_alignParentTop="true">
+
+		<ImageView
+			android:id="@+id/img_home"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/logo_inner"
+			android:layout_gravity="start|center_vertical"/>
+
+		<ImageView
+			android:id="@+id/img_account"
+			android:layout_width="@dimen/_20sdp"
+			android:layout_height="@dimen/_20sdp"
+			android:src="@drawable/ic_account"
+			android:layout_gravity="center_vertical"
+			android:layout_marginEnd="@dimen/_7sdp"/>
+
+		<ImageView
+			android:id="@+id/img_notification"
+			android:layout_width="@dimen/_20sdp"
+			android:layout_height="@dimen/_20sdp"
+			android:src="@drawable/notification"
+			android:layout_gravity="center_vertical"
+			android:layout_marginEnd="@dimen/_7sdp"/>
+
+		<androidx.cardview.widget.CardView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:cardCornerRadius="@dimen/_13sdp">
+
+			<Refractored.Controls.CircleImageView
+				android:id="@+id/ivProfile"
+				android:layout_width="@dimen/_26sdp"
+				android:layout_height="@dimen/_26sdp"
+				android:src="@drawable/dp"
+				android:background="@drawable/dp"
+				android:layout_gravity="center_vertical"/>
+
+		</androidx.cardview.widget.CardView>
+
+	</GridLayout>
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginTop="@dimen/_35sdp">
+
+		<ImageView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:src="@drawable/round_background"
+			android:minHeight="@dimen/_100sdp"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Price Quote"
+				android:textColor="@android:color/white"
+				android:textSize="@dimen/medium"
+				android:layout_marginStart="@dimen/_15sdp"
+				android:layout_marginVertical="@dimen/_5sdp"
+				android:background="@android:color/transparent"/>
+
+			<androidx.cardview.widget.CardView
+				android:id="@+id/CardViewLayout"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginHorizontal="@dimen/_10sdp"
+				app:cardElevation="@dimen/_2sdp"
+				app:cardCornerRadius="@dimen/_5sdp"
+				android:paddingBottom="@dimen/_10sdp"
+				android:layout_marginBottom="@dimen/_10sdp">
+
+				<LinearLayout
+					android:id="@+id/linearLayoutChoosePlan"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:orientation="vertical"
+					android:gravity="center_horizontal"
+					android:layout_marginTop="@dimen/_5sdp"
+					android:paddingTop="@dimen/_5sdp">
+
+					<androidx.constraintlayout.widget.ConstraintLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:paddingTop="@dimen/_5sdp"
+						android:layout_marginHorizontal="@dimen/_30sdp">
+
+						<ImageView
+							android:id="@id/bubble_start_en"
+							android:layout_width="@dimen/_15sdp"
+							android:layout_height="@dimen/_15sdp"
+							app:srcCompat="@drawable/bubble"
+							app:layout_constraintStart_toStartOf="parent"/>
+
+						<ImageView
+							android:id="@id/bubble_center_en"
+							android:layout_width="@dimen/_15sdp"
+							android:layout_height="@dimen/_15sdp"
+							app:srcCompat="@drawable/bubble"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintEnd_toEndOf="parent"
+							android:tint="@color/Silver"/>
+
+						<ImageView
+							android:id="@id/bubble_end_en"
+							android:layout_width="@dimen/_15sdp"
+							android:layout_height="@dimen/_15sdp"
+							app:srcCompat="@drawable/bubble"
+							app:layout_constraintEnd_toEndOf="parent"
+							android:tint="@color/Silver"/>
+
+						<View
+							android:id="@+id/line1_en"
+							android:layout_width="0dp"
+							android:layout_height="@dimen/_1sdp"
+							app:layout_constraintEnd_toStartOf="@+id/bubble_center_en"
+							app:layout_constraintStart_toEndOf="@+id/bubble_start_en"
+							android:background="@color/Silver"
+							app:layout_constraintTop_toTopOf="parent"
+							app:layout_constraintBottom_toBottomOf="parent"/>
+
+						<View
+							android:id="@+id/line2_en"
+							android:layout_width="0dp"
+							android:layout_height="@dimen/_1sdp"
+							app:layout_constraintEnd_toStartOf="@+id/bubble_end_en"
+							app:layout_constraintStart_toEndOf="@+id/bubble_center_en"
+							android:background="@color/Silver"
+							app:layout_constraintTop_toTopOf="parent"
+							app:layout_constraintBottom_toBottomOf="parent"/>
+
+					</androidx.constraintlayout.widget.ConstraintLayout>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal"
+						android:layout_marginHorizontal="@dimen/_10sdp"
+						android:layout_marginTop="@dimen/_5sdp"
+						android:weightSum="3">
+
+						<TextView
+							android:id="@+id/txtInput_en"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="Choose Plan"
+							android:layout_weight="1"
+							android:textSize="@dimen/small"
+							android:textColor="@color/buttonOrange"/>
+
+						<TextView
+							android:id="@+id/txtPlan_en"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="Choose Add-Ons"
+							android:layout_weight="1"
+							android:textSize="@dimen/small"
+							android:textColor="@color/Sliver"/>
+
+						<TextView
+							android:id="@+id/txtQuote_en"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="Quote"
+							android:layout_weight="1"
+							android:gravity="end"
+							android:paddingEnd="@dimen/_10sdp"
+							android:textSize="@dimen/small"
+							android:textColor="@color/Sliver"/>
+
+					</LinearLayout>
+
+
+					<LinearLayout
+						android:id="@+id/layout_enquiry"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="vertical"
+						android:gravity="center_horizontal"
+						android:visibility="gone">
+
+						<TextView
+							android:id="@+id/txtPlan"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="Select a Plan"
+							android:textSize="@dimen/small"
+							android:layout_gravity="start"
+							android:layout_marginTop="@dimen/_15sdp"
+							android:layout_marginHorizontal="@dimen/_10sdp"/>
+
+						<LinearLayout
+							android:id="@+id/layout_enquiry"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="horizontal"
+							android:textColor="@color/Matterhorn"
+							android:paddingHorizontal="@dimen/_10sdp"
+							android:layout_gravity="end"
+							android:gravity="end">
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Sort by"
+								android:layout_marginHorizontal="@dimen/_5sdp"
+								android:textSize="@dimen/xsmall"
+								android:textColor="@color/Matterhorn"/>
+
+							<LinearLayout
+								android:layout_width="wrap_content"
+								android:layout_height="match_parent"
+								android:background="@drawable/spinner_border"
+								android:gravity="center"
+								android:layout_gravity="center"
+								android:paddingHorizontal="@dimen/_7sdp"
+								android:paddingVertical="@dimen/_2sdp"
+								android:orientation="horizontal">
+
+								<Spinner
+									android:id="@+id/spinner"
+									android:layout_width="wrap_content"
+									android:layout_height="match_parent"
+									android:gravity="center_vertical"
+									android:layout_gravity="center_vertical"
+									android:overlapAnchor="false"
+									android:paddingEnd="@dimen/_5sdp"
+									android:background="@android:color/transparent"/>
+
+								<ImageView
+									android:id="@+id/spinner_image"
+									android:layout_width="@dimen/_10sdp"
+									android:layout_height="wrap_content"
+									android:layout_gravity="end"
+									android:gravity="center_vertical"
+									android:src="@drawable/down" />
+
+							</LinearLayout>
+
+						</LinearLayout>
+
+						<androidx.recyclerview.widget.RecyclerView
+							android:id="@+id/RecyclerView_Plan"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"/>
+
+					</LinearLayout>
+
+
+					<androidx.core.widget.NestedScrollView
+						android:id="@+id/layout_choosePlan"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:visibility="gone"
+						android:scrollbars="none">
+
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:orientation="vertical">
+
+							<TextView
+								android:id="@+id/txtPlan"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Select an Add-Ons"
+								android:textSize="@dimen/large"
+								android:layout_gravity="start"
+								android:layout_marginTop="@dimen/_15sdp"
+								android:layout_marginHorizontal="@dimen/_10sdp"/>
+
+							<include
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								layout="@layout/plan_cell"
+								android:layout_marginHorizontal="@dimen/_10sdp"
+								android:layout_marginTop="@dimen/_5sdp"
+								android:layout_marginBottom="@dimen/_10sdp"/>
+
+						</LinearLayout>
+
+					</androidx.core.widget.NestedScrollView>
+
+					<androidx.core.widget.NestedScrollView
+						android:id="@+id/layout_price"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:visibility="gone"
+						android:scrollbars="none">
+
+						<include
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							layout="@layout/quote_layout"
+							android:layout_marginHorizontal="@dimen/_10sdp"/>
+
+					</androidx.core.widget.NestedScrollView>
+
+				</LinearLayout>
+
+			</androidx.cardview.widget.CardView>
+
+		</LinearLayout>
+	</FrameLayout>
+
+</RelativeLayout>
